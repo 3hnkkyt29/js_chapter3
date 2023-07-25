@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カラーピッカー</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <!--headタグ内でjsの読み込み指定をしてdefer属性をつけて読み込ませるのが良い-->
+    <!--defer属性を付けることで非同期になる。HTML解析とJSの読み込みが同時に進む。-->
+  </head>
+
+  <body>
+    <div>
+      <p id="colorText">カラーコードを検索</p>
+      <input id="colorPicker" type="color">
+      <!--inputタグのtype属性をcolorとすることでカラーピッカーを表示させる-->
+    </div>
+  </body>
+</html>
