@@ -20,9 +20,15 @@ document.querySelector('#colorText').textContent=`カラーコード：${documen
 のように、表示させたい文字列をバックティック（＝`）で囲み、文字列以外のコードを「${ }」で囲む。
 */
 
+// 3-7
 // 長くなるから定数名を定義する
 const text = document.querySelector('#colorText');
 const color = document.querySelector('#colorPicker');
 // const 定数名 = 中に入れる値;
 // 12行目を定数名を利用し書き換えたものが以下
 text.textContent = `カラーコード：${document.querySelector('#colorPicker').value}`;
+
+// 3-8
+color.addEventListener('input', colorBg)
+// イベントの設定には「addEventListener」を使用。
+// index.htmlの16行目参照。
