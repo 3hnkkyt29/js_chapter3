@@ -1,5 +1,5 @@
 // console.log(document.querySelector('#colorPicker').value);
-// documentオブジェクトの中から指定したセレクター（＝colorPicker）を持つ要素を取得して（＝メソッド＝querySelector）
+// documentオブジェクトの中から指定したセレクター（＝colorPicker）を持つ要素を取得（＝メソッド＝querySelector）して
 
 // document.querySelector('#colorText').textContent='カラーコード:';
 /*.textContent='(表示させたい文言)'　で書き換わる
@@ -9,7 +9,7 @@ document.querySelector('#colorText').innerHTML='<h1>カラーコード:<h1>';
 という風に「innerHTML」を使用すれば<h1>を表示させずに済む。
 */
 
-document.querySelector('#colorText').textContent=`カラーコード：${document.querySelector('#colorPicker').value}`;
+// document.querySelector('#colorText').textContent = `カラーコード：${document.querySelector('#colorPicker').value}`;
 /*通常のテキストとプログラミングコードを組み合わせる書き方は２種類
 1つ目は
 document.querySelector('#colorText').textContent='カラーコード：'+document.querySelector('#colorPicker').value;
@@ -19,3 +19,10 @@ document.querySelector('#colorText').textContent='カラーコード：'+documen
 document.querySelector('#colorText').textContent=`カラーコード：${document.querySelector('#colorPicker').value}`;
 のように、表示させたい文字列をバックティック（＝`）で囲み、文字列以外のコードを「${ }」で囲む。
 */
+
+// 長くなるから定数名を定義する
+const text = document.querySelector('#colorText');
+const color = document.querySelector('#colorPicker');
+// const 定数名 = 中に入れる値;
+// 12行目を定数名を利用し書き換えたものが以下
+text.textContent = `カラーコード：${document.querySelector('#colorPicker').value}`;
