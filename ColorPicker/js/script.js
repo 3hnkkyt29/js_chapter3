@@ -26,9 +26,18 @@ const text = document.querySelector('#colorText');
 const color = document.querySelector('#colorPicker');
 // const 定数名 = 中に入れる値;
 // 12行目を定数名を利用し書き換えたものが以下
-text.textContent = `カラーコード：${document.querySelector('#colorPicker').value}`;
+// text.textContent = `カラーコード：${document.querySelector('#colorPicker').value}`;
 
 // 3-8
-color.addEventListener('input', colorBg)
+// color.addEventListener('input', colorBg);
+// 上記は41行目に移動
 // イベントの設定には「addEventListener」を使用。
 // index.htmlの16行目参照。
+
+// 3-9
+// colorBgを関数名とする
+const colorBg = () => {
+  text.textContent = `カラーコード：${color.value}`;
+}
+// カラーピッカーが変更（入力＝input）されたらcolorBgを発動させる
+color.addEventListener('input', colorBg);
