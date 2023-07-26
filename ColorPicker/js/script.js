@@ -36,8 +36,24 @@ const color = document.querySelector('#colorPicker');
 
 // 3-9
 // colorBgを関数名とする
+//
+/*
 const colorBg = () => {
   text.textContent = `カラーコード：${color.value}`;
 }
-// カラーピッカーが変更（入力＝input）されたらcolorBgを発動させる
+
+カラーピッカーが変更（入力＝input）されたらcolorBgを発動させる
 color.addEventListener('input', colorBg);
+*/
+
+// 3-10
+const colorBg = () => {
+ // 選択した色を背景色に設定
+ document.body.style.backgroundColor = color.value;
+ // カラーコードを表示
+ text.textContent = `カラーコード：${color.value}`;
+}
+// カラーピッカーが変更されたらcolorBgを発動
+color.addEventListener('input', colorBg);
+
+// 要素.style.CSSのプロパティ名（ハイフンが入る場合はキャメルケースで書く） = 値;
